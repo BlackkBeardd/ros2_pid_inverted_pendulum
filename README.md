@@ -28,22 +28,19 @@ Before building, make sure you have:
 
 ---
 
-## 🔧 Installation
-
-Clone the repository into your ROS 2 workspace:
+## 🔧 Installation, Usage & Sending Commands
 
 ```bash
+# Installation
 cd ~/ros2_ws/src
 git clone https://github.com/BlackkBeardd/ros2_pid_inverted_pendulum.git
 cd ..
 colcon build --symlink-install
 source install/setup.bash
 
-## 🔧 Usage
-
+# Usage - Launch the simulation
 ros2 launch pendulum_control_description pendulum_controller.launch.py
 ros2 launch pid_controller pid_controller.launch.py
 
-## 🔧 Sending commands
+# Sending Commands - Publish desired joint positions
 ros2 topic pub /joint_setpoint std_msgs/msg/Float64 'data: {desired_joint_position}'
-```
