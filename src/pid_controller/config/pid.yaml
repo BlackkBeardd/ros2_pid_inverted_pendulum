@@ -1,0 +1,6 @@
+pid_controller:
+  ros__parameters:
+    kp: 0.3
+    kd: 0.1
+    ki: 0.05
+    joint_name: "revolute_joint"
